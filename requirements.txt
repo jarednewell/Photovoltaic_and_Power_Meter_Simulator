@@ -1,0 +1,4 @@
+# Requirements for PV Simulator
+pika == 1.3.0   # RabbitMQ client
+scipy == 1.9.1  # Science library
+numpy == 1.23.3 # Math library
