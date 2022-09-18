@@ -54,9 +54,13 @@ The output of the application is stored in a file call pv_simulator_results.log:
 <p>
 The pv_simulator_results.log can be accessed by executing:
 <li>docker exec -it pvsimulator cat /usr/src/pv_simulator/pv_simulator_results.log</li>
+</p>
+<p>
+The headings for the file are listed below:
 <b> Date/Time - Energy Meter - Photovoltaic Simulated Output - 
 The Sum of the Energy Meter and The Photovoltaic Simulated Output</b>
-<li>2022-09-14T09:03:01.677948+00:00 23.07 0.4 23.47</li> 
+With example output as:
+<li>2022-09-18T18:14:47.871613+00:00 814.518 0.8 815.318</li> 
 </p>
 
 For more examples, please refer to the pv_simulator_results.log
