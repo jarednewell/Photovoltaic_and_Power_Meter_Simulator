@@ -3,7 +3,7 @@ PV Simulator Settings File
 """
 
 # Message client configuration
-rabbitmq_host = 'pvsimulator'  # set the location of your RabbitMQ server
+rabbitmq_host = 'rabbitmq'  # set the location of your RabbitMQ server
 queue_name = 'energy'
 exchange = ''
 default_port = 5672 # For test case reference only

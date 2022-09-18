@@ -36,16 +36,16 @@ can be found at <a href="https://www.rabbitmq.com/download.html"> RabbitMQ</a>
 </p>
 <h3>Installation</h3>
 <p>
-Using the docker compose file called 'docker_file_pv_sim' in this repo to build the application image.
-Copy this file to the directory and run the following commands.
+Using the docker compose file called 'docker_file_pv_sim.txt' in this repo to build the application image.
+Copy this file to the current working directory and run the following commands.
 </p>
 <ul>
-<li> docker build -t pv_simulator -f ./docker_file_pv_sim . 
+<li> docker build -t pv_simulator -f ./docker_file_pv_sim.txt . 
 <li> docker run -d --hostname rabbitmq --name rabbitmq rabbitmq:latest </li>
 <li> docker run -d --hostname pvsimulator --name pvsimulator pv_simulator:latest </li>
-<li> docker network create internal </li>
-<li> docker network connect internal rabbitmq </li>
-<li> docker network connect internal pvsimulator  </li>
+<li> docker network create pv_simulator </li>
+<li> docker network connect pv_simulator rabbitmq </li>
+<li> docker network connect pv_simulator pvsimulator </li>
 </ul>
 
 <h3>Usage</h3>

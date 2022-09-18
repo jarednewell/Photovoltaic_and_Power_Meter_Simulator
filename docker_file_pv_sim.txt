@@ -9,4 +9,4 @@ RUN wget https://github.com/jarednewell/Photovoltaic_and_Power_Meter_Simulator/a
 RUN unzip master.zip
 RUN pip install --no-cache-dir -r ./Photovoltaic_and_Power_Meter_Simulator-master/requirements.txt
 
-CMD [ "python", "./main.py" ]
+CMD [ "python", "./Photovoltaic_and_Power_Meter_Simulator-master/main.py" ]
