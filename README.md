@@ -42,8 +42,8 @@ Copy this file to the current working directory and run the following commands.
 <ul>
 <li> docker build --no-cache -t pv_simulator -f ./docker_file_pv_sim.txt . 
 <li> docker network create pv_simulator </li>
-<li> docker run -d --hostname pvsimulator --network pv_simulator --name pvsimulator pv_simulator:latest </li>
 <li> docker run -d --hostname rabbitmq --network pv_simulator --name rabbitmq rabbitmq:latest  </li>
+<li> docker run -d --hostname pvsimulator --network pv_simulator --name pvsimulator pv_simulator:latest </li>
 </ul>
 
 <h3>Usage</h3>
