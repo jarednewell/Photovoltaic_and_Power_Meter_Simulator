@@ -56,10 +56,10 @@ The pv_simulator_results.log can be accessed by executing:
 <li>docker exec -it pvsimulator cat /usr/src/pv_simulator/pv_simulator_results.log</li>
 </p>
 <p>
-The headings for the file are listed below:
+The headings for the file are listed below:<br>
 <b> Date/Time - Energy Meter - Photovoltaic Simulated Output - 
 The Sum of the Energy Meter and The Photovoltaic Simulated Output</b>
-With example output as:
+With example output as:<br>
 <li>2022-09-18T18:14:47.871613+00:00 814.518 0.8 815.318</li> 
 </p>
 
