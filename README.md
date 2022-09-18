@@ -64,7 +64,7 @@ With example output as:<br>
 <li>2022-09-18T18:14:47.871613+00:00 814.518 0.8 815.318</li> 
 </p>
 
-For more examples, please refer to the pv_simulator_results.log
+For more examples, please refer to the pv_simulator_results.log in this repo.
 
 <h3>License</h3>
 GNU General Public License (GPLv3)
