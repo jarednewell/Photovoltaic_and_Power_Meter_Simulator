@@ -40,19 +40,20 @@ Using the docker compose file called 'docker_file_pv_sim.txt' in this repo to bu
 Copy this file to the current working directory and run the following commands.
 </p>
 <ul>
-<li> docker build -t pv_simulator -f ./docker_file_pv_sim.txt . 
-<li> docker run -d --hostname rabbitmq --name rabbitmq rabbitmq:latest </li>
-<li> docker run -d --hostname pvsimulator --name pvsimulator pv_simulator:latest </li>
+<li> docker build --no-cache -t pv_simulator -f ./docker_file_pv_sim.txt . 
 <li> docker network create pv_simulator </li>
-<li> docker network connect pv_simulator rabbitmq </li>
-<li> docker network connect pv_simulator pvsimulator </li>
+<li> docker run -d --hostname pvsimulator --network pv_simulator --name pvsimulator pv_simulator:latest </li>
+<li> docker run -d --hostname rabbitmq --network pv_simulator --name rabbitmq rabbitmq:latest  </li>
 </ul>
 
 <h3>Usage</h3>
 <p>
-The output of the application is stored in a file call pv_simulator_results:
+The output of the application is stored in a file call pv_simulator_results.log:
 </p>
+
 <p>
+The pv_simulator_results.log can be accessed by executing:
+<li>docker exec -it pvsimulator cat /usr/src/pv_simulator/pv_simulator_results.log</li>
 <b> Date/Time - Energy Meter - Photovoltaic Simulated Output - 
 The Sum of the Energy Meter and The Photovoltaic Simulated Output</b>
 <li>2022-09-14T09:03:01.677948+00:00 23.07 0.4 23.47</li> 
