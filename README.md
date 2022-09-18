@@ -36,14 +36,16 @@ can be found at <a href="https://www.rabbitmq.com/download.html"> RabbitMQ</a>
 </p>
 <h3>Installation</h3>
 <p>
-Using the docker compose file in this repo to install the application and the
-supporting environment.
+Using the docker compose file called 'docker_file_pv_sim' in this repo to build the application image.
+Copy this file to the directory and run the following commands.
 </p>
 <ul>
-<li> </li>
-<li> Docker  </li>
-<li> Docker  </li>
-<li> Docker  </li>
+<li> docker build -t pv_simulator -f ./docker_file_pv_sim . 
+<li> docker run -d --hostname rabbitmq --name rabbitmq rabbitmq:latest </li>
+<li> docker run -d --hostname pvsimulator --name pvsimulator pv_simulator:latest </li>
+<li> docker network create internal </li>
+<li> docker network connect internal rabbitmq </li>
+<li> docker network connect internal pvsimulator  </li>
 </ul>
 
 <h3>Usage</h3>
@@ -51,8 +53,8 @@ supporting environment.
 The output of the application is stored in a file call pv_simulator_results:
 </p>
 <p>
-<b> Date/Time - Energy Meter - Photovoltaic Simulated Output - The Sum of the Energy 
-Meter and The Photovoltaic Simulated Output</b>
+<b> Date/Time - Energy Meter - Photovoltaic Simulated Output - 
+The Sum of the Energy Meter and The Photovoltaic Simulated Output</b>
 <li>2022-09-14T09:03:01.677948+00:00 23.07 0.4 23.47</li> 
 </p>
 
